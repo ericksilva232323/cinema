@@ -1,25 +1,24 @@
-// screens/about.js
+// screens/About.js
 import * as React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, StyleSheet} from 'react-native';
 
-function About({ navigation }) {
-  return (
-    <View style={{ display: 'flex', flexDirection:'row' , justifyContent: 'center', alignItems: 'center' }}>
-      <Text>About Screen</Text>
-      <Button
-        title="Destaques"
-        onPress={() => navigation.navigate('Home')}
-      />
-      <Button
-        title="Buscar Filmes"
-        onPress={() => navigation.navigate('Buscar')}
-      />
-      <Button
-        title="Indicações"
-        onPress={() => navigation.navigate('Indica')}
-      />
+function About(){
+  return(
+    <View style={styles.container}>
+      <Text>About</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+    padding: 80,
+    paddingTop: 50,
+  }
+})
 
 export default About;

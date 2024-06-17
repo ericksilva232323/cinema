@@ -1,25 +1,24 @@
-// screens/busca.js
+// screens/BuscarFilmes.js
 import * as React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-function BuscarFilmes({ navigation }) {
-  return (
-    <View style={{ display: 'flex', flexDirection:'row' , justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Buscar Filmes Screen</Text>
-      <Button
-        title="Go to Home"
-        onPress={() => navigation.navigate('Home')}
-      />
-      <Button
-        title="Go to Indica"
-        onPress={() => navigation.navigate('Indica')}
-      />
-      <Button
-        title="Go to About"
-        onPress={() => navigation.navigate('About')}
-      />
+function BuscarFilmes(){
+  return(
+    <View style={styles.container}>
+      <Text>Pesquisar Filmes</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+    padding: 80,
+    paddingTop: 50,
+  }
+})
 
 export default BuscarFilmes;

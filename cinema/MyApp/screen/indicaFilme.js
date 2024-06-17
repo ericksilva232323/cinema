@@ -1,25 +1,24 @@
-// screens/indicaFilme.js
+// screens/IndicaFilmes.js
 import * as React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-function IndicaFilmes({ navigation }) {
-  return (
-    <View style={{ display: 'flex', flexDirection:'row' , justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Indica Filmes Screen</Text>
-      <Button
-        title="Destaques"
-        onPress={() => navigation.navigate('Home')}
-      />
-      <Button
-        title="Buscar Filmes"
-        onPress={() => navigation.navigate('Buscar')}
-      />
-      <Button
-        title="About"
-        onPress={() => navigation.navigate('About')}
-      />
+function IndicaFilmes(){
+  return(
+    <View style={styles.container}>
+      <Text>Indicações ao O S C A R</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container :{
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+    padding: 80,
+    paddingTop: 50,
+  }
+})
 
 export default IndicaFilmes;
